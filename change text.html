@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<script>
+function changeText(text) {
+x = document.getElementById("textToChange");
+x.innerHTML = text;
+}
+
+function changeTextInput() {
+x = document.getElementById("textToChange");
+text = document.getElementById("userInput").value;
+x.innerHTML = text;
+}
+
+function increaseSize() {
+x = document.getElementById("textToChange");
+x.style.fontSize = "150%"
+}
+
+</script>
+</head>
+<body>
+<h1 id="textToChange">Placeholder Text</h1>
+<button onclick="changeText('Hello World')">Change Text</button>
+<button onclick="increaseSize()">Increase Size</button>
+<br>
+<p>Input Text:</p>
+<input type="text" id="userInput"></input>
+<button onclick="changeTextInput()">Submit</button>
+</body>

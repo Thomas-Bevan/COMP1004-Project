@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+function AlertMessage() {
+window.alert("alert message");
+}
+
+function ConsoleMessage() {
+console.log("Console is Active");
+}
+
+function ReplaceText() { 
+x = document.getElementsByTagName("p")[0];
+x.innerHTML = "New Text!";
+}
+
+function MakeTextSmaller() {
+x = document.getElementsByTagName("p")[0];
+x.style.fontSize = "10px";
+}
+
+function AddNumbers(num1, num2) {
+textToChange = document.getElementById("numbers");
+console.log(textToChange);
+x = num1 + num2;
+textToChange.innerHTML = x;
+}
+
+function AddText(text) {
+newTag = document.createElement("strong");
+newTag.innerHTML = text;
+x = document.getElementsByTagName("p")[1];
+x.parentElement.append(newTag);
+}
+
+var firstName = "Jon";
+var lastName = "Brown";
+
+console.log(firstName + " " + lastName);
+</script>
+</head>
+<body>
+<button onclick="AlertMessage()">Alert message</button>
+<button onclick="ConsoleMessage()">Console message</button>
+<button onclick="ReplaceText()">Replace text</button>
+<button onclick="MakeTextSmaller()">Make text smaller</button>
+<button onclick="AddNumbers(10,20)">Add Numbers</button>
+<button onclick="AddText('Hello World')">Add Text</button>
+<p id="numbers">numbers added</p>
+<p>placeholder text</p>
+</body>
